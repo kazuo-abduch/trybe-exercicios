@@ -232,10 +232,12 @@ function exercicio11 (){
     // Resultado: R$ 2.612,55.
     // Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
     
-    const salario = 4000;
+    const salario = 3000;
     
     let impostoRenda;
     let impostoINSS;
+
+    let salarioBase;
 
     if(salario <= 1556.94){
         impostoINSS = salario*0.08;
@@ -250,16 +252,18 @@ function exercicio11 (){
         impostoINSS = 570.88
     }
 
-    if(salario <= 1903.98){
+    salarioBase = salario - impostoINSS;
+
+    if(salarioBase <= 1903.98){
         impostoRenda = 0;
-    }else if (salario > 1903.98 && salario <= 2826.65){
-        impostoRenda = salario*0.075 - 142.8;
-    }else if (salario > 2826.65 && salario <= 3751.05){
-        impostoRenda = salario*0.15 - 354.80;
-    }else if (salario > 3751.05 && salario <= 4664.68){
-        impostoRenda = salario*0.225 - 636.13;
-    }else if (salario > 4664.68){
-        impostoRenda = salario*0.275 - 869.36
+    }else if (salarioBase > 1903.98 && salarioBase <= 2826.65){
+        impostoRenda = salarioBase*0.075 - 142.8;
+    }else if (salarioBase > 2826.65 && salarioBase <= 3751.05){
+        impostoRenda = salarioBase*0.15 - 354.80;
+    }else if (salarioBase > 3751.05 && salarioBase <= 4664.68){
+        impostoRenda = salarioBase*0.225 - 636.13;
+    }else if (salarioBase > 4664.68){
+        impostoRenda = salarioBase*0.275 - 869.36
     }
 
     console.log('Seu salário líquido é de R$',salario - impostoRenda - impostoINSS);
