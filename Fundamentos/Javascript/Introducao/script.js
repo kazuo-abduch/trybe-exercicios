@@ -94,29 +94,30 @@ function exercicio6 (){
     // Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
     // Exemplo: bishop (bispo) -> diagonals (diagonais)
 
-    let peçadexadrez = 'Peão';
+    let peçadexadrez = 'Rainha';
     let peçaToLowerCase = peçadexadrez.toLocaleLowerCase();
 
-    if(peçaToLowerCase == 'bispo'){
-        console.log('Bispo se movimenta nas diagonais');
-
-    }else if (peçaToLowerCase == 'peão'){
-        console.log('Peão se movimenta para frente, mas come na diagonal fronta adjacente');
-
-    }else if (peçaToLowerCase == 'cavalo'){
-        console.log('Cavalo se movimenta em L');
-
-    }else if (peçaToLowerCase == 'torre'){
-        console.log('Torre se movimenta em linhas retas');
-        
-    }else if (peçaToLowerCase == 'rainha'){
-        console.log('Rainha se movimenta em qualquer direção');
-
-    }else if (peçaToLowerCase == 'rei'){
-        console.log('Rei se movimenta em qualquer direção, porém, apenas 1 quadrado');
-
-    }else {
-        console.log('esta peça não existe no xadrez');
+    switch (peçaToLowerCase){
+        case 'bispo':
+            console.log('Bispo se movimenta nas diagonais');
+            break;
+        case 'peão':
+            console.log('Peão se movimenta para frente, mas come na diagonal fronta adjacente');
+            break;
+        case 'cavalo':
+            console.log('Cavalo se movimenta em L');
+            break;
+        case 'torre':
+            console.log('Torre se movimenta em linhas retas');
+            break;
+        case 'rainha':
+            console.log('Rainha se movimenta em qualquer direção');
+            break;
+        case 'rei':
+            console.log('Rei se movimenta em qualquer direção, porém, apenas 1 quadrado');
+            break;
+        default:
+            console.log('esta peça não existe no xadrez');
     }
 }
 
@@ -269,4 +270,4 @@ function exercicio11 (){
     console.log('Seu salário líquido é de R$',salario - impostoRenda - impostoINSS);
 }
 
-console.log(exercicio11());
+console.log(exercicio6());
