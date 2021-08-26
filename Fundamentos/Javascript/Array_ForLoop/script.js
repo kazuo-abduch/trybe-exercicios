@@ -121,6 +121,45 @@ function exercicio9 (){
     }
 }
 
+function exercicioBonus1() {
+    let vetorBonus = [5, 3, 2, 4, 7, 1, 0, 6];
+
+    for (let index = 1; index < vetorBonus.length; index += 1) {
+        for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+          if (vetorBonus[index] < vetorBonus[secondIndex]) {
+            let position = vetorBonus[index];
+            vetorBonus[index] = vetorBonus[secondIndex];
+            vetorBonus[secondIndex] = position;
+          }
+        }
+    }
+    console.log(vetorBonus);
+    for (let index = 1; index < vetorBonus.length; index += 1) {
+        for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+          if (vetorBonus[index] > vetorBonus[secondIndex]) {
+            let position = vetorBonus[index];
+            vetorBonus[index] = vetorBonus[secondIndex];
+            vetorBonus[secondIndex] = position;
+          }
+        }
+    }
+    console.log(vetorBonus);
+}
+
+function exercicioBonus2(){
+
+    let vetorBonus = [5, 3, 2, 4, 7, 1, 0, 6];
+    let vetorBonusxNove = [];
+
+    for (let i = 0 ; i < vetorBonus.length ; i++){
+        vetorBonusxNove.push(vetorBonus[i]*9);  
+
+    }
+    console.log(vetorBonus);
+    console.log(vetorBonusxNove);
+}
+
+
 exercicio1();
 exercicio2();
 exercicio3();
@@ -130,3 +169,5 @@ exercicio6();
 exercicio7();
 exercicio8();
 exercicio9();
+exercicioBonus1();
+exercicioBonus2();
